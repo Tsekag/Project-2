@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="Style/bootstrap.css" />
+    <link rel="stylesheet" href="style/styles.css" />
+  </head>
+  <body class="bg-dark text-white">
+    <div id="background-container">
+      <div class="dynamic-background"></div>
+    </div>
+    <nav class="navbar navbar-dark">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
+            height="40"
+            alt="Netflix"
+            class="d-block"
+          />
+        </a>
+        <button class="btn btn-danger rounded-2 px-4 py-2 mb-1 mt-2">
+          Sign In
+        </button>
+      </div>
+    </nav>
+    <div class="content-wrapper">
+      <div class="hero-container">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div
+              class="carousel-item active"
+              data-bg="https://image.tmdb.org/t/p/original/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg"
+            >
+              <img
+                src="https://image.tmdb.org/t/p/original/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg"
+                alt="The Witcher"
+                class="w-100 h-100 object-fit-cover"
+              />
+              <div class="carousel-caption text-start">
+                <h1 class="display-4 fw-bold mb-3">The Witcher</h1>
+                <p class="lead mb-4">
+                  Geralt of Rivia, a solitary monster hunter, struggles to find
+                  his place in a world.
+                </p>
+                <form class="subscription-form" id="emailForm1">
+                  <div class="input-group input-group-lg">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email address"
+                      aria-label="Email address"
+                      required
+                    />
+                    <button
+                      class="btn btn-danger px-4 fw-semibold"
+                      type="submit"
+                    >
+                      Get Started
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div
+              class="carousel-item"
+              data-bg="https://image.tmdb.org/t/p/original/56v2KjBlU4XaOv9rVYEQypROD7P.jpg"
+            >
+              <img
+                src="https://image.tmdb.org/t/p/original/56v2KjBlU4XaOv9rVYEQypROD7P.jpg"
+                alt="Stranger Things"
+                class="w-100 h-100 object-fit-cover"
+              />
+              <div class="carousel-caption text-start">
+                <h1 class="display-4 fw-bold mb-3">Stranger Things</h1>
+                <p class="lead mb-4">
+                  When a young boy disappears, his mother, a police chief, and
+                  his friends must confront terrifying forces.
+                </p>
+                <form class="subscription-form" id="emailForm2">
+                  <div class="input-group input-group-lg">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email address"
+                      aria-label="Email address"
+                      required
+                    />
+                    <button
+                      class="btn btn-danger px-4 fw-semibold"
+                      type="submit"
+                    >
+                      Get Started
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div
+              class="carousel-item"
+              data-bg="https://image.tmdb.org/t/p/original/2OMB0ynKlyIenMJWI2Dy9IWT4c.jpg"
+            >
+              <img
+                src="https://image.tmdb.org/t/p/original/2OMB0ynKlyIenMJWI2Dy9IWT4c.jpg"
+                alt="La Casa de Papel"
+                class="w-100 h-100 object-fit-cover"
+              />
+              <div class="carousel-caption text-start">
+                <h1 class="display-4 fw-bold mb-3">Money Heist</h1>
+                <p class="lead mb-4">
+                  A criminal mastermind who goes by "The Professor" has a plan
+                  to pull off the biggest heist in history.
+                </p>
+                <form class="subscription-form" id="emailForm3">
+                  <div class="input-group input-group-lg">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email address"
+                      aria-label="Email address"
+                      required
+                    />
+                    <button
+                      class="btn btn-danger px-4 fw-semibold"
+                      type="submit"
+                    >
+                      Get Started
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+        <div class="gradient-overlay"></div>
+      </div>
+
+      <section class="trending-section container-fluid position-relative">
+        <div class="content-wrapper">
+          <h2 class="display-6 text-white fw-semibold ps-4 mb-3 mt-3">
+            Trending Now
+          </h2>
+          <div class="position-relative">
+            <button class="scroll-button prev" aria-label="Scroll left">
+              ‹
+            </button>
+            <button class="scroll-button next" aria-label="Scroll right">
+              ›
+            </button>
+            <div class="row flex-nowrap px-4 pb-4 movie-row">
+              <div class="col-auto pe-3">
+                <div
+                  class="card border-0 bg-transparent position-relative movie-item"
+                >
+                  <div class="ranking-badge">1</div>
+                  <img
+                    src="https://image.tmdb.org/t/p/w500/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg"
+                    class="card-img"
+                    alt="Wednesday"
+                  />
+                  <div
+                    class="card-img-overlay d-flex align-items-end movie-overlay"
+                  >
+                    <div class="text-white">
+                      <h5 class="card-title mb-1">Wednesday</h5>
+                      <p class="card-text small">2023 | Drama, Fantasy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto pe-3">
+                <div
+                  class="card border-0 bg-transparent position-relative movie-item"
+                >
+                  <div class="ranking-badge">2</div>
+                  <img
+                    src="https://image.tmdb.org/t/p/w500/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg"
+                    class="card-img"
+                    alt="Black Mirror"
+                  />
+                  <div
+                    class="card-img-overlay d-flex align-items-end movie-overlay"
+                  >
+                    <div class="text-white">
+                      <h5 class="card-title mb-1">Black Mirror</h5>
+                      <p class="card-text small">2023 | Sci-Fi, Thriller</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto pe-3">
+                <div
+                  class="card border-0 bg-transparent position-relative movie-item"
+                >
+                  <div class="ranking-badge">3</div>
+                  <img
+                    src="https://image.tmdb.org/t/p/w500/bI7lGR5HuYlENlp11brKUAaPHuO.jpg"
+                    class="card-img"
+                    alt="The Crown"
+                  />
+                  <div
+                    class="card-img-overlay d-flex align-items-end movie-overlay"
+                  >
+                    <div class="text-white">
+                      <h5 class="card-title mb-1">The Crown</h5>
+                      <p class="card-text small">2023 | Drama, History</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto pe-3">
+                <div
+                  class="card border-0 bg-transparent position-relative movie-item"
+                >
+                  <div class="ranking-badge">4</div>
+                  <img
+                    src="https://image.tmdb.org/t/p/w500/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg"
+                    class="card-img"
+                    alt="The Umbrella Academy"
+                  />
+                  <div
+                    class="card-img-overlay d-flex align-items-end movie-overlay"
+                  >
+                    <div class="text-white">
+                      <h5 class="card-title mb-1">The Umbrella Academy</h5>
+                      <p class="card-text small">2023 | Action, Adventure</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto pe-3">
+                <div
+                  class="card border-0 bg-transparent position-relative movie-item"
+                >
+                  <div class="ranking-badge">5</div>
+                  <img
+                    src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg"
+                    class="card-img"
+                    alt="Bridgerton"
+                  />
+                  <div
+                    class="card-img-overlay d-flex align-items-end movie-overlay"
+                  >
+                    <div class="text-white">
+                      <h5 class="card-title mb-1">Bridgerton</h5>
+                      <p class="card-text small">2023 | Drama, Romance</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="more-reasons">
+        <h2 class="reasons-title">Why Choose Netflix?</h2>
+        <div class="reasons-grid">
+          <div class="reason-card">
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+              alt="Unlimited"
+              class="reason-icon"
+            />
+            <h3>Unlimited Entertainment</h3>
+            <p>
+              Watch anywhere, anytime. Stream unlimited movies and TV shows on
+              your phone, tablet, laptop, and TV.
+            </p>
+          </div>
+          <div class="reason-card">
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/cancel.png"
+              alt="Cancel"
+              class="reason-icon"
+            />
+            <h3>Cancel Anytime</h3>
+            <p>
+              No complicated contracts. No commitments. Cancel your subscription
+              anytime with just one click.
+            </p>
+          </div>
+          <div class="reason-card">
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/quality.png"
+              alt="Quality"
+              class="reason-icon"
+            />
+            <h3>High Quality</h3>
+            <p>
+              Enjoy stunning 4K Ultra HD picture quality with compatible
+              devices. Watch in HDR for brilliant color.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">What is Netflix?</button>
+            <div class="faq-answer">
+              <p>
+                Netflix is a streaming service that offers a wide variety of
+                award-winning TV shows, movies, anime, documentaries, and more
+                on thousands of internet-connected devices.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How much does Netflix cost?</button>
+            <div class="faq-answer">
+              <p>
+                Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
+                streaming device, all for one fixed monthly fee. Plans range
+                from $8.99 to $17.99 a month.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Where can I watch?</button>
+            <div class="faq-answer">
+              <p>
+                Watch anywhere, anytime. Sign in with your Netflix account to
+                watch instantly on the web at netflix.com from your personal
+                computer or on any internet-connected device.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How do I cancel?</button>
+            <div class="faq-answer">
+              <p>
+                Netflix is flexible. There are no annoying contracts and no
+                commitments. You can easily cancel your account online in two
+                clicks.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What can I watch on Netflix?</button>
+            <div class="faq-answer">
+              <p>
+                Netflix has an extensive library of feature films,
+                documentaries, TV shows, anime, award-winning Netflix originals,
+                and more. Watch as much as you want, anytime you want.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container position-relative z-3 text-center">
+          <h1 class="display-4 mb-4">
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </h1>
+          <form class="email-form mx-auto" onsubmit="handleSubmit(event)">
+            <div class="row justify-content-center g-2">
+              <div class="col-12 col-md-8 col-lg-6">
+                <div class="form-floating">
+                  <input
+                    type="email"
+                    class="form-control form-control-lg bg-dark text-white border-0"
+                    id="emailInput"
+                    placeholder="Email address"
+                    required
+                  />
+                  <label for="emailInput" class="text-secondary"
+                    >Email address</label
+                  >
+                </div>
+              </div>
+              <div class="col-12 col-md-auto">
+                <button
+                  type="submit"
+                  class="btn btn-danger btn-lg w-100 d-flex align-items-center justify-content-center gap-2"
+                >
+                  Get Started
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="footer-section">
+          <div class="container py-5">
+            <div class="footer-content">
+              <p class="mb-4">
+                Questions?
+                <a href="#" class="text-white text-decoration-underline"
+                  >Contact us</a
+                >
+              </p>
+              <div class="row g-4 text-start">
+                <div class="col-6 col-md-3">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >FAQ</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Investor Relations</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Privacy</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Speed Test</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Help Center</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Jobs</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Cookie Preferences</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Legal Notices</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Account</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Ways to Watch</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Corporate Information</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Only on Netflix</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Media Center</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Terms of Use</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Contact Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="language-selector mt-4">
+                <select
+                  class="form-select form-select-lg bg-dark text-white border-secondary w-auto"
+                >
+                  <option value="en">English</option>
+                  <option value="es">Español</option>
+                </select>
+              </div>
+
+              <p class="mt-4 text-secondary">Netflix Ethiopia</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="loading-spinner"></div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
