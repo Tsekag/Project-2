@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  alert("This website is a Netflix clone for educational purposes only. No actual subscriptions or logins work here.");
+
     // Navbar scroll effect
     const navbar = document.querySelector(".navbar");
     const backgroundContainer = document.getElementById(
