@@ -1,1 +1,1 @@
-NETFLIX CLONE USING BOOTSTRAP AND BASIC HTML, CSS, JS FOR A LEARNING
+Netflix landing page clone using basic HTML, CSS, JavaScript and Bootstrap for learning base
