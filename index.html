@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="Style/styles.css" />
+  </head>
+  <body class="text-white">
+    <div id="background-container">
+      <div class="dynamic-background"></div>
+    </div>
+    <section class="hero-stage" id="top">
+      <nav class="navbar navbar-dark navbar-over-hero">
+        <div class="container-fluid hero-nav-inner">
+          <a class="navbar-brand" href="#top">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
+              height="40"
+              alt="Netflix"
+              class="d-block"
+            />
+          </a>
+          <button
+            type="button"
+            class="btn btn-danger rounded-2 px-3 px-md-4 py-2"
+            id="signInBtn"
+            data-bs-toggle="modal"
+            data-bs-target="#signInModal"
+          >
+            Sign In
+          </button>
+        </div>
+      </nav>
+      <div class="hero-container">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div
+              class="carousel-item active"
+              data-bg="https://image.tmdb.org/t/p/original/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg"
+            >
+              <img
+                src="https://image.tmdb.org/t/p/original/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg"
+                alt="The Witcher"
+                class="w-100 h-100 object-fit-cover"
+              />
+              <div class="carousel-caption hero-caption text-center">
+                <h1 class="display-4 fw-bold mb-3">The Witcher</h1>
+                <p class="lead mb-4">
+                  Geralt of Rivia, a solitary monster hunter, struggles to find
+                  his place in a world.
+                </p>
+                <form class="subscription-form hero-email-form" id="emailForm1" novalidate>
+                  <div class="hero-email-field">
+                    <div class="input-group input-group-lg">
+                      <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Email address"
+                        aria-label="Email address"
+                        autocomplete="email"
+                        required
+                      />
+                      <button
+                        class="btn btn-danger px-4 fw-semibold"
+                        type="submit"
+                      >
+                        Get Started
+                      </button>
+                    </div>
+                    <div class="invalid-feedback hero-invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div
+              class="carousel-item"
+              data-bg="https://image.tmdb.org/t/p/original/56v2KjBlU4XaOv9rVYEQypROD7P.jpg"
+            >
+              <img
+                src="https://image.tmdb.org/t/p/original/56v2KjBlU4XaOv9rVYEQypROD7P.jpg"
+                alt="Stranger Things"
+                class="w-100 h-100 object-fit-cover"
+              />
+              <div class="carousel-caption hero-caption text-center">
+                <h1 class="display-4 fw-bold mb-3">Stranger Things</h1>
+                <p class="lead mb-4">
+                  When a young boy disappears, his mother, a police chief, and
+                  his friends must confront terrifying forces.
+                </p>
+                <form class="subscription-form hero-email-form" id="emailForm2" novalidate>
+                  <div class="hero-email-field">
+                    <div class="input-group input-group-lg">
+                      <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Email address"
+                        aria-label="Email address"
+                        autocomplete="email"
+                        required
+                      />
+                      <button
+                        class="btn btn-danger px-4 fw-semibold"
+                        type="submit"
+                      >
+                        Get Started
+                      </button>
+                    </div>
+                    <div class="invalid-feedback hero-invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div
+              class="carousel-item"
+              data-bg="https://image.tmdb.org/t/p/original/2OMB0ynKlyIenMJWI2Dy9IWT4c.jpg"
+            >
+              <img
+                src="https://image.tmdb.org/t/p/original/2OMB0ynKlyIenMJWI2Dy9IWT4c.jpg"
+                alt="La Casa de Papel"
+                class="w-100 h-100 object-fit-cover"
+              />
+              <div class="carousel-caption hero-caption text-center">
+                <h1 class="display-4 fw-bold mb-3">Money Heist</h1>
+                <p class="lead mb-4">
+                  A criminal mastermind who goes by "The Professor" has a plan
+                  to pull off the biggest heist in history.
+                </p>
+                <form class="subscription-form hero-email-form" id="emailForm3" novalidate>
+                  <div class="hero-email-field">
+                    <div class="input-group input-group-lg">
+                      <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Email address"
+                        aria-label="Email address"
+                        autocomplete="email"
+                        required
+                      />
+                      <button
+                        class="btn btn-danger px-4 fw-semibold"
+                        type="submit"
+                      >
+                        Get Started
+                      </button>
+                    </div>
+                    <div class="invalid-feedback hero-invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-indicators hero-carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1: The Witcher"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2: Stranger Things"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3: Money Heist"
+            ></button>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+            aria-label="Previous slide"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+            aria-label="Next slide"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="hero-vignette" aria-hidden="true"></div>
+        <div class="hero-dome" aria-hidden="true">
+          <svg
+            class="hero-dome-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 240"
+            preserveAspectRatio="none"
+          >
+            <defs>
+              <linearGradient id="heroDomeGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#e50914" stop-opacity="0" />
+                <stop offset="20%" stop-color="#e50914" stop-opacity="0.75" />
+                <stop offset="50%" stop-color="#ff4d6d" />
+                <stop offset="80%" stop-color="#e50914" stop-opacity="0.75" />
+                <stop offset="100%" stop-color="#e50914" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <path
+              class="hero-dome-fill"
+              d="M0,118 C0,118 0,92 40,84 C210,48 470,6 720,6 C970,6 1230,48 1400,84 C1440,92 1440,118 1440,118 L1440,240 L0,240 Z"
+            />
+            <path
+              class="hero-dome-line hero-dome-line-glow"
+              d="M0,118 C0,118 0,92 40,84 C210,48 470,6 720,6 C970,6 1230,48 1400,84 C1440,92 1440,118 1440,118"
+            />
+            <path
+              class="hero-dome-line hero-dome-line-core"
+              d="M0,118 C0,118 0,92 40,84 C210,48 470,6 720,6 C970,6 1230,48 1400,84 C1440,92 1440,118 1440,118"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="trending-section site-surface position-relative">
+        <div class="layout-inner trending-inner">
+          <h2 class="trending-title display-6 text-white fw-semibold mb-3">
+            Trending Now
+          </h2>
+          <div class="position-relative">
+            <button class="scroll-button prev carousel-loop-btn" type="button" aria-label="Scroll left">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="m15 18-6-6 6-6"/>
+              </svg>
+            </button>
+            <button class="scroll-button next carousel-loop-btn" type="button" aria-label="Scroll right">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </button>
+            <div
+              class="row flex-nowrap pb-4 movie-row"
+              id="trendingMovieRow"
+              aria-label="Trending titles carousel"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+    <div class="content-wrapper">
+      <section class="more-reasons site-surface">
+        <h2 class="reasons-title">Why Choose Netflix?</h2>
+        <div class="reasons-grid">
+          <div class="reason-card">
+            <div class="reason-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" fill="none">
+                <rect x="8" y="14" width="56" height="36" rx="4" stroke="#e50914" stroke-width="3"/>
+                <path d="M28 54h16" stroke="#e50914" stroke-width="3" stroke-linecap="round"/>
+                <path d="M36 50v4" stroke="#e50914" stroke-width="3" stroke-linecap="round"/>
+                <path d="M22 28l8 6 8-10 12 14" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Unlimited Entertainment</h3>
+            <p>
+              Watch anywhere, anytime. Stream unlimited movies and TV shows on
+              your phone, tablet, laptop, and TV.
+            </p>
+          </div>
+          <div class="reason-card">
+            <div class="reason-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" fill="none">
+                <circle cx="36" cy="36" r="26" stroke="#e50914" stroke-width="3"/>
+                <circle cx="26" cy="30" r="3" fill="#fff"/>
+                <circle cx="46" cy="30" r="3" fill="#fff"/>
+                <path d="M24 44c4 6 20 6 24 0" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M48 20l8-8M56 20l-8-8" stroke="#e50914" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Cancel Anytime</h3>
+            <p>
+              No complicated contracts. No commitments. Cancel your subscription
+              anytime with just one click.
+            </p>
+          </div>
+          <div class="reason-card">
+            <div class="reason-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" fill="none">
+                <rect x="10" y="18" width="52" height="36" rx="4" stroke="#e50914" stroke-width="3"/>
+                <path d="M10 26h52" stroke="#e50914" stroke-width="2"/>
+                <text x="36" y="44" text-anchor="middle" fill="#fff" font-size="14" font-weight="700" font-family="Arial,sans-serif">4K</text>
+                <path d="M54 12l6 6-6 6" stroke="#e50914" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>High Quality</h3>
+            <p>
+              Enjoy stunning 4K Ultra HD picture quality with compatible
+              devices. Watch in HDR for brilliant color.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+      <section class="faq-section" id="faq-section">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" class="faq-question">What is Netflix?</button>
+            <div class="faq-answer">
+              <p>
+                Netflix is a streaming service that offers a wide variety of
+                award-winning TV shows, movies, anime, documentaries, and more
+                on thousands of internet-connected devices.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question">How much does Netflix cost?</button>
+            <div class="faq-answer">
+              <p>
+                Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
+                streaming device, all for one fixed monthly fee. Plans range
+                from $8.99 to $17.99 a month.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question">Where can I watch?</button>
+            <div class="faq-answer">
+              <p>
+                Watch anywhere, anytime. Sign in with your Netflix account to
+                watch instantly on the web at netflix.com from your personal
+                computer or on any internet-connected device.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question">How do I cancel?</button>
+            <div class="faq-answer">
+              <p>
+                Netflix is flexible. There are no annoying contracts and no
+                commitments. You can easily cancel your account online in two
+                clicks.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question">What can I watch on Netflix?</button>
+            <div class="faq-answer">
+              <p>
+                Netflix has an extensive library of feature films,
+                documentaries, TV shows, anime, award-winning Netflix originals,
+                and more. Watch as much as you want, anytime you want.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid position-relative z-3 text-center membership-cta">
+          <h2 class="membership-cta-title mb-4">
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </h2>
+          <form class="email-form mx-auto membership-email-form" id="membershipEmailForm" novalidate>
+            <div class="row justify-content-center g-2 align-items-start">
+              <div class="col-12 col-md-8 col-lg-6">
+                <div class="form-floating">
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control form-control-lg bg-dark text-white border-secondary membership-email-input"
+                    id="emailInput"
+                    placeholder="Email address"
+                    autocomplete="email"
+                    required
+                  />
+                  <label for="emailInput" class="text-secondary"
+                    >Email address</label
+                  >
+                  <div class="invalid-feedback text-start">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-auto col-lg-auto">
+                <button
+                  type="submit"
+                  class="btn btn-danger btn-lg w-100 membership-submit-btn d-flex align-items-center justify-content-center gap-2"
+                >
+                  Get Started
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="footer-section">
+          <div class="container footer-container">
+            <div class="footer-content">
+              <p class="footer-contact mb-3 mb-md-4">
+                Questions?
+                <a href="#faq-section" class="text-white text-decoration-underline"
+                  >Contact us</a
+                >
+              </p>
+              <div class="row footer-links g-3 g-md-4 text-start">
+                <div class="col-6 col-md-3">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#faq-section" class="text-secondary text-decoration-none"
+                        >FAQ</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Investor Relations</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Privacy</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Speed Test</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Help Center</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Jobs</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Cookie Preferences</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Legal Notices</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Account</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Ways to Watch</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Corporate Information</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Only on Netflix</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Media Center</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Terms of Use</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >Contact Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="footer-meta">
+                <div class="language-selector">
+                  <select
+                    class="form-select form-select-lg bg-dark text-white border-secondary footer-language-select"
+                    aria-label="Language"
+                  >
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                  </select>
+                </div>
+                <p class="footer-region text-secondary mb-0">Netflix Ethiopia</p>
+              </div>
+
+              <p class="site-disclaimer">
+                This project is for educational purposes only. This is NOT an
+                official Netflix website. All content belongs to their respective
+                owners.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <div class="loading-spinner" role="status" aria-label="Loading"></div>
+
+    <div
+      class="toast-container position-fixed bottom-0 end-0 p-3 toast-container-custom"
+      id="toastContainer"
+    ></div>
+
+    <div
+      class="modal fade"
+      id="signInModal"
+      tabindex="-1"
+      aria-labelledby="signInModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary">
+          <div class="modal-header border-secondary">
+            <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-secondary small mb-3">
+              Demo only — no real Netflix account is created.
+            </p>
+            <form id="signInForm" novalidate>
+              <div class="mb-3">
+                <label for="signInEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control bg-secondary text-white border-0"
+                  id="signInEmail"
+                  required
+                  autocomplete="email"
+                />
+                <div class="invalid-feedback">Enter a valid email.</div>
+              </div>
+              <div class="mb-3">
+                <label for="signInPassword" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control bg-secondary text-white border-0"
+                  id="signInPassword"
+                  required
+                  minlength="4"
+                  autocomplete="current-password"
+                />
+                <div class="invalid-feedback">
+                  Password must be at least 4 characters.
+                </div>
+              </div>
+              <button type="submit" class="btn btn-danger w-100">
+                Sign In
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
